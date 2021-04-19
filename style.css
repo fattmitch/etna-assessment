@@ -1,0 +1,309 @@
+/*
+ ------ GLOBAL ------
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-weight: 300;
+}
+
+a {
+  color: #79CD47;
+  text-decoration: none;
+}
+
+h1,
+h3,
+p {
+  color: #444444;
+}
+
+.button {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #fff;
+  background: #79CD47;
+  padding: 10px 30px;
+  text-align: center;
+  display: inline-block;
+}
+
+/*
+ ------ HEADER ------
+ */
+
+header {
+  padding: 20px;
+  background: #55595D;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 300;
+  max-width: 240px;
+}
+
+.header-brand svg {
+  margin-right: 10px;
+  width: 80px;
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.menu-toggle svg {
+  height: 22px;
+  width: 30px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.header-right {
+  display: none;
+}
+
+.header-links {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.header-links a {
+  color: #fff;
+}
+
+.header-links a:not(:last-child):after {
+  content: "|";
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.header-location {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #fff;
+}
+
+.primary-navigation {
+  position: absolute;
+  top: 61px;
+  left: 0;
+  width: 100%;
+  margin-top: 30px;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  background: #55595D;
+  z-index: 3;
+}
+
+.primary-navigation .nav-links {
+  list-style: none;
+  padding: 0;
+}
+
+.primary-navigation .nav-item {
+  padding: 10px 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .header-wrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto 48px;
+    max-width: 1100px;
+
+  }
+
+  .header-brand {
+    max-width: 380px;
+    flex-basis: 50%;
+  }
+
+  .header-brand svg {
+    width: 100px;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .header-right {
+    display: block;
+    flex-basis: 50%;
+    margin-top: 10px;
+  }
+
+  .header-right .header-links {
+    justify-content: flex-end;
+  }
+
+  .header-right .header-location {
+    text-align: right;
+    margin-top: 30px;
+  }
+
+  .primary-navigation {
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    top: 108px;
+    right: 0;
+    background: #79CD47;
+    z-index: 10;
+  }
+
+  .primary-navigation .nav-links {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 5px 0;
+    max-width: 1140px;
+    padding: 0 20px;
+  }
+
+  .primary-navigation .navigation-link {
+    color: #fff;
+  }
+
+  .primary-navigation .header-links,
+  .primary-navigation .header-location {
+    display: none;
+  }
+}
+
+/*
+ ------ HEROES ------
+ */
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero .container::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .6);
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  display: flex;
+  min-height: 45vh;
+}
+
+.hero .hero-content {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #fff;
+  z-index: 2;
+  padding: 0 30px
+}
+
+
+.hero .hero-content h1 {
+  font-size: 40px;
+  text-align: center;
+  flex-basis: 100%;
+  color: #fff;
+}
+
+.hero .hero-content .button {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 10px 30px;
+  text-align: center;
+  background: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .hero .hero-content {
+    padding: 0;
+  }
+}
+
+/*
+ ------ Text w/ background ------
+ */
+
+.repeating-background {
+  background: url('https://background-tiles.com/overview/white/patterns/large/1018.png') center / 120px repeat;
+}
+
+.page-text {
+  padding: 60px 30px;
+}
+
+.page-text .text-content {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.page-text .text-content p {
+  line-height: 1.8;
+}
+
+@media only screen and (min-width: 1024px) {
+  .page-text {
+    padding: 60px;
+  }
+}
+
+.page-text .button {
+  margin-top: 10px;
+}
+
+/*
+ ------ Columns ------
+ */
+
+.columns .column-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
